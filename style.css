@@ -1,0 +1,706 @@
+:root{
+    --main-bg-color:rgb(24,24,24);
+    --text-color:rgb(230,230,230);
+    --accent-color:rgb(128, 49, 232);
+}
+
+/* --------------------- General styles -------------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'poppins', sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+}
+.container{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+p {
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* -------------------- Header styles -------------*/
+#header {
+    height: 15vh;
+}
+.logo {
+    display: inline-block;
+    margin-top: 4vh;
+    font-size: 3rem;
+    color: var(--accent-color);
+    font-family: 'Alex Brush','Lucida Handwriting', cursive;
+}
+
+/* --------------------- Navbar styles -------------*/
+nav {
+    display: inline-block;
+    height: 10vh;
+    width: 80%;
+    text-align: right;
+    margin-left: 2.5rem;
+    
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+nav ul li a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+}
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--accent-color);
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+/* ----------------------Hamburger menu--------------*/
+#hamburger-nav {
+    display: none;
+    width: 20%;
+}
+.hamburger-menu{
+    position: relative;
+    display: inline-block;
+}
+.hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+.hamburger-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: all 0.3 ease-in-out;
+}
+.menu-links{
+    position: absolute;
+    top: 100%;
+    right: -20px;
+    background-color: var(--main-bg-color);
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+.menu-links a{
+    display: block;
+    padding: 0.7rem;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+.menu-links li{
+    list-style: none;
+}
+.menu-links.open{
+    max-height: 400px;
+}
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px,5px);
+}
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0;
+}
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px,-5px);
+}
+.hamburger-icon span:first-child{
+    transform: none;
+}
+.hamburger-icon span:first-child{
+    opacity: 1;
+}
+
+/*-------------------------- Home -------------------*/
+#home {
+    height: 85vh;
+    padding-top: 4vh;
+}
+.home-article{
+    display: flex;
+}
+.profile-text {
+    margin-top: 20%;
+    display: inline-block;
+}
+.home-article img{
+    border-radius: 50%;
+    margin-left: 10%;
+    height: 50%;
+    width: 50%;
+}
+.profile-text h1{
+    margin-top: 1rem;
+    font-size: 3rem;
+}
+.profile-text h1 span {
+    color: var(--accent-color);
+}
+.button-container {
+    margin-top: 2.5rem;
+}
+.btn {
+    margin-right: 2rem;
+    display: inline-block;
+    border: 1px solid var(--accent-color);
+    border-radius: 6px;
+    width: fit-content;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    box-shadow: 0 0 20px var(--accent-color);
+    color: var(--text-color);
+    background-color: var(--main-bg-color);
+    transition: background 0.5s;
+    font-size: 1rem;
+}
+.btn:hover {
+    background-color: var(--accent-color);
+}
+
+/*---------------------- Sections -------------*/
+section {
+    padding-top: 15vh;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+/* ---------------- Styling for title in sections------------*/
+.section-title {
+    color: var(--accent-color);
+
+}
+/* --------- Styling for paragrafs in sections -----------*/
+.section-p {
+    margin-top: 0.3rem;
+}
+
+/* -------------------------About ---------------------*/
+#about {
+    align-items: center;
+}
+.about-article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.about-left {
+    display: inline-block;
+    width: 50%;
+    padding-right: 3.2rem;
+}
+.about-left img {
+    width: 100%;
+    border-radius: 6px;
+}
+.about-right {
+    width: 50%;
+    display: inline-block;
+}
+
+/* ------------------Skills ---------------------*/
+.tab-titles {
+    display: flex;
+}
+.tab-title{
+    margin-top: 2rem;
+    margin-right: 3.5rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    position: relative;
+}
+.tab-title::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--accent-color);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.tab-title.active-title::after{
+    width: 100%;
+}
+.tab-content ul li {
+    list-style: none;
+    font-size: 1rem;
+    line-height: 2rem;
+    margin-top: 1.5rem;
+}
+.tab-content ul li span {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.tab-content{
+    display: none;
+}
+.tab-content.active-tab{
+    display: block;
+}
+ 
+/* ------------------Portfolio -----------------*/
+.portfolio-article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding-top: 2rem;
+}
+.my-work{
+    width: calc(33.33% - 5.5rem);
+    display: inline-block;
+    padding: 1.2rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 6px;
+    box-shadow: 0 0 20px var(--accent-color);
+}
+.my-work img {
+    width: 100%;
+    border-radius: 6px;
+}
+.work-text h2 {
+    margin-top: 0.7rem;
+}
+.work-text p{
+    margin-top: 0.7rem;
+}
+.work-text a i{
+    color: var(--text-color);
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 0 20px var(--accent-color);
+    padding: 0.7rem;
+    border-radius: 50px;
+    margin-top: 1.4rem;
+    margin-bottom: 0.2rem;
+    margin-left: 44%;
+    font-size: 1.2rem;
+}
+.work-text a i:hover{
+    transform: scale(1.3);
+}
+ /* ------------------References -----------------*/
+.references-article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding-top: 2rem;
+}
+.reference-list {
+    width: calc(50% - 4.7rem);
+    display: inline-block;
+    padding: 1.2rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 6px;
+    box-shadow: 0 0 20px var(--accent-color);
+    text-align: center;
+}
+.reference-name {
+    color: var(--accent-color);
+}
+.reference-position {
+    padding: 0.8rem 0 0.8rem 0;
+}
+.reference-quote{
+    font-style: italic;
+    padding: 0 0.8rem 0 0.8rem;
+}
+.reference-quote i{
+    color: var(--accent-color);
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+}
+/* ------------------Contact -----------------*/
+.contact-article {
+    display: flex;
+    padding-top: 3.5rem;
+    margin-bottom: 3.5rem;
+}
+.contact-left {
+    flex-basis: 30%;
+    margin-top: 4rem;
+}
+.contact-left p i {
+    color: var(--accent-color);
+    font-size: 1.7rem;
+    margin-bottom: 1.7rem;
+    margin-right: 1rem;
+}
+.contact-left a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+}
+.btn-cv-contact{
+    margin-top: 2.3rem;
+}
+.social-media a {
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--text-color);
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-media a:hover{
+    color: var(--accent-color);
+    transform: scale(1.3);
+}
+.contact-right {
+    flex-basis: 50%;
+}
+.contact-img{
+    border-radius: 50%;
+    width: 100%;
+    margin-left: 10%;
+
+}
+
+/* ------------------Footer -----------------*/
+.footer {
+    height: 20vh;
+}
+.footer-nav {
+    text-align: center;
+    width: 100%;
+    margin:0;
+    height: 6vh;
+}
+.footer-p {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.footer-p span {
+    color: var(--accent-color);
+}
+/* -----------------Media queries for tablet-------------*/
+@media screen and (min-width: 768px) and (max-width:1024px){
+    .logo {
+        font-size: 1.7rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    h1 {
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+    h2 {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    .desktop-nav {
+        margin-top: 0.8rem;
+    }
+    #header {
+        height: 10vh;
+    }
+    nav {
+        height: 5vh;
+    }
+    nav ul li a{
+        font-size: 0.9rem;
+    }
+    nav ul li {
+        margin-left: 0.7rem;
+        margin-right: 0.7rem;
+    }
+    #home {
+        margin-top: 5%;
+        padding-top: 0;
+    }
+    .profile-text h1 {
+        font-size: 2.5rem;
+    }
+    .button-container{
+        margin-top: 7%;
+    }
+    .btn {
+        margin:0 1.5rem;
+        justify-content: center;
+    }
+    .home-article img {
+        height: 60%;
+        width: 60%;
+        margin-left: 0;
+        margin-top: 0%;
+        margin-bottom: 7%;
+    }
+    .profile-text {
+        margin-top: 0;
+    }
+    .home-article{
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+    /*About*/
+    .about-article {
+        flex-direction: column;
+    }
+    .about-left {
+        width: 100%;
+        padding-right: 0;
+    }
+    .about-left img {
+        width: 100%;
+    }
+    .about-right {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 4%;
+    }
+    /* skills*/
+    .tab-titles {
+        display: flex;
+        margin-bottom: 2rem;
+    }
+    .tab-title{
+        margin-right: 3rem;
+        font-size: 1.2rem;
+    }
+    .tab-content ul li {
+        list-style: none;
+        font-size: 1rem;
+        line-height: 1.8rem;
+        margin-top: 1rem;
+        width: 100%;
+    }
+    .tab-content ul li span {
+        color: var(--accent-color);
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+    /* Portfolio*/
+    .portfolio-article {
+        flex-direction: row;
+    }
+    .my-work{
+        width: calc(50% - 4.7rem);
+    }
+    .work-text p {
+        font-size: 0.9rem;
+    }
+    .work-text a i{
+        font-size: 1rem;
+    }
+    /*contact*/
+    .contact-left {
+        flex-basis: 50%;
+        margin-top: 1rem;
+    }
+    .contact-left p i {
+        font-size: 1.7rem;
+        margin-bottom: 1.7rem;
+        margin-right: 1rem;
+    }
+    .btn-cv-contact{
+        margin-top: 2.2rem;
+        margin-left: 0;
+    }
+    .social-media a {
+        font-size: 1.7rem;
+        margin-right: 1rem;
+    }
+    .contact-right {
+        flex-basis: 40%;
+        padding-left: 5%;
+    }
+    .contact-img{
+        width: 150%;
+        margin-left: 0;
+    }
+    
+    /* Footer*/
+    .footer-nav {
+        height: 5vh;
+        margin-top: 2rem;
+    }
+}
+
+/* ---------------------- Media queries för mobil----------*/
+@media screen and (max-width:768px) {
+    .container{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    p {
+        font-size: 0.7rem;
+        line-height: 1rem;
+    }
+    h1 {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    h2 {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    .desktop-nav {
+        display: none;
+    }
+    #hamburger-nav{
+        display: block;
+        float: right;
+        margin-top: 4vh;
+        margin-right: 0;
+    }
+    #home {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .btn {
+        margin-bottom: 6%;
+        margin-right: 0.8rem;
+        margin-left: 0.8rem;
+        font-size: 0.7rem;
+    }
+    .button-container{
+        align-items: center;
+        justify-content: space-between;
+    }
+    .home-article img {
+        height: 60%;
+        width: 60%;
+        margin-left: 0;
+        margin-top: 10%;
+    }
+    .profile-text {
+        margin-top: 1rem;
+    }
+    .profile-text h1 {
+        font-size: 1.5rem;
+    }
+    .home-article{
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    /*About*/
+    .about-article {
+        flex-direction: column;
+    }
+    .about-left {
+        width: 100%;
+        padding-right: 0;
+    }
+    .about-left img {
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 1rem;
+    }
+    .about-right {
+        width: 100%;
+        margin-left: 0;
+    }
+    /* skills*/
+    .tab-titles {
+        display: flex;
+        margin-bottom: 1.2rem;
+        padding-top: 0;
+    }
+    .tab-title{
+        margin-right: 2rem;
+        margin-top: 1.2rem;
+        font-size: 0.9rem;
+    }
+    .tab-title::after{
+        height: 2px;
+    }
+    .tab-content ul li {
+        list-style: none;
+        font-size: 0.7rem;
+        line-height: 1rem;
+        margin-top: 1rem;
+        width: 100%;
+    }
+    .tab-content ul li span {
+        color: var(--accent-color);
+        font-size: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+    /* Portfolio*/
+    .portfolio-article {
+        flex-direction: column;
+    }
+    .my-work{
+        width: 88%;
+    }
+    .work-text a i{
+        font-size: 0.8rem;
+    }
+    /* Referenser*/
+    .references-article {
+        flex-direction: column;
+    }
+    .reference-list {
+        width: 88%;
+    }
+
+    /*Contact*/
+    .contact-article {
+        flex-direction: column-reverse;
+        padding-top: 1.5rem;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    .contact-left{
+        margin-top: 1rem;
+    }
+    .contact-left p i {
+        color: var(--accent-color);
+        font-size: 1.4rem;
+    }
+    .contact-left a{
+        font-size: 0.7rem;
+    }
+    .btn-cv-contact{
+        margin: 2rem 0;
+    }
+    .social-media a {
+        font-size: 1.4rem;
+        margin: 0 0.8rem;
+    }
+    .contact-right {
+        padding-left: 0;
+    }
+    /*Footer*/
+    .footer-nav {
+        display: none;
+    }
+}

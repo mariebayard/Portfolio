@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Min Portfolio</title>
+</head>
+<body>
+    <!-----------------Container START----------------------->
+    <div class="container">
+        <!-----------------Header START----------------------->
+        <header id="header">
+            <div class="logo">M.B.</div>
+            <!-----------------Navbar START----------------------->
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#header">Hem</a></li>
+                    <li><a href="#about">Om mig</a></li>
+                    <li><a href="#skills_experience">Kompetens</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#references">Referenser</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+            <nav id="hamburger-nav">
+                <div class="hamburger-menu">
+                    <div class="hamburger-icon" onclick="navMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="menu-links">
+                        <li><a href="#about" onclick="navMenu()">Om mig</a></li>
+                        <li><a href="#skills_experience" onclick="navMenu()">Kompetens</a></li>
+                        <li><a href="#portfolio" onclick="navMenu()">Portfolio</a></li>
+                        <li><a href="#references" onclick="navMenu()">Referenser</a></li>
+                        <li><a href="#contact" onclick="navMenu()">Kontakt</a></li>
+                    </div>
+                </div>
+            </nav>
+            <!-----------------Navbar END----------------------->
+        </header>
+        <!-----------------Header END----------------------->
+        <!-----------------Section Home START----------------------->
+        <main>
+            <section id="home">
+                <article class="home-article">
+                    <div>
+                        <div class="profile-text">
+                            <p class="section-p">Blivande AI Utvecklare</p>
+                            <h1>Hej, jag är <span>Marie</span>! <br>Välkommen till min Portfolio!</h1>
+                        </div>
+                        <div class="button-container">
+                            <a class="btn btn-cv" href="images/CV Marie Bayard.pdf" download>Ladda ner CV</a>
+                            <a class="btn btn-contact" href="#contact">Kontakta mig</a>
+                        </div>
+                    </div>
+                    <img src="images/home_pic2.png" alt="Profilepicture">
+                </article>
+            </section>
+            <!--------------- Section Home END -------------------->
+            <!--------------- Section About START------------------>
+            <section id="about">
+                <article class="about-article">
+                    <div class="about-left">
+                        <img src="images/about_pic.png" alt="About picture">
+                    </div>
+                    <div class="about-right">
+                        <h1 class="section-title">Om mig</h1>
+                        <p class="section-p">Jag är en person med mycket driv och energi som alltid ger 100% för det jag bestämmer mig för att göra. 
+                            Jag ser positivt på saker och när det händer mycket runt omkring mig trivs jag som bäst. <br><br>
+                            Sedan augusti 2023 studerar jag till AI Utvecklare på Jensen Yrkeshögskola och jag tar examen
+                            i juni 2025. <br><br>När jag började programmera kände jag att jag hade hittat helt rätt och den känslan
+                            förstärks hela tiden. Jag älskar problemlösningen, logiken och att utmana mig
+                            själv och det är fantastiskt att lära mig mer varje dag. Det är också det som tilltalar mig mest med en karriär inom
+                            IT och programmering, att jag alltid kommer kunna fortsätta utvecklas och lära mig mer.  
+                        </p>
+                    </div>
+                </article>
+            </section>
+            <!--------------- Section About END------------------>
+            <!--------------- Section Skills & Experience START------------------>
+            <section id="skills_experience">
+                <div class="skills-container">
+                    <h1 class="section-title">Kompetens & Erfarenhet</h1>
+                    <article class="skills-article">
+                        <div class="tab-titles">
+                            <p class="tab-title active-title" onclick="opentab(event, 'skills')">Kompetens</p>
+                            <p class="tab-title" onclick="opentab(event, 'experience')">Erfarenhet</p>
+                            <p class="tab-title" onclick="opentab(event, 'education')">Utbildning</p>
+                        </div>
+                        <div class="tab-content active-tab" id="skills">
+                            <ul>
+                                <li><span>Python</span><br>Goda kunskaper i grunderna i Python. Jag har även jobbat med bibliotek som Pandas, Pyspark, Numpy, Pytest, Matplotlib och Flask</li>
+                                <li><span>Webb Utveckling</span><br>HTML, CSS, JavaScript</li>
+                                <li><span>Databaser</span><br>SQLite</li>
+                                <li><span>AI Utveckling</span><br>Under våren kommer jag lära mig mer om Maskininlärning, Djupinlärning och AI</li>
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="experience">
+                            <ul>
+                                <li><span>2019-pågående (tjänstledig)</span><br>Träningsansvarig</li>
+                                <li><span>2013-2019</span><br>Personlig Tränare</li>
+                                <li><span>2007-2012</span><br>Butiksbiträde, Chark och delikatesser</li>
+                                <li><span>2010-2011</span><br>Sjukgymnast</li>
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="education">
+                            <ul>
+                                <li><span>2023-pågående</span><br>Jensen Yrkeshögskola, AI Developer</li>
+                                <li><span>2013</span><br>Kungliga Tekniska Högskolan, Högskoleingenjör inom Teknik och Ekonomi, 1 termin</li>
+                                <li><span>2007-2010</span><br>Karolinska Institutet, Sjukgymnastexamen</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!--------------- Section Skills & Experience END------------------>
+            <!--------------- Section Portfolio START------------------>
+            <section id="portfolio">
+                <div class="portfolio-container">
+                    <h1 class="section-title">Mina Projekt</h1>
+                    <p class="section-p"> Som student inom AI Utveckling lär jag mig nya saker varje dag. Följ länken till
+                        GitHub för att ta en närmre titt på några av mina projekt.
+                    </p>
+                    <article class="portfolio-article">
+                        <div class="my-work">
+                            <img src="images/work_flask.png" alt="My Work Flask">
+                            <div class="work-text">
+                                <h2>Flask Applikation</h2>
+                                <p>Biblioteksapplikation byggd med Python, Flask och SQLite.</p>
+                                <a href="https://github.com/mariebayard/Biblioteks-app-Flask-SQLite" title="Gå till Github" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="my-work">
+                            <img src="images/work_pandas.png" alt="My Work Pandas">
+                            <div class="work-text">
+                                <h2>Analys med Pandas</h2>
+                                <p>Analys av vinrecensioner med Pandas, Matplotlib och Seaborn.</p>
+                                <a href="https://github.com/mariebayard/Analys-vinrecensioner-Pandas" title="Gå till Github" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="my-work">
+                            <img src="images/work_webportfolio.png" alt="My Work Webportfolio">
+                            <div class="work-text">
+                                <h2>Webb Applikation</h2>
+                                <p>En portfölj där du har chansen att lära känna mig bättre.</p>
+                                <a href="https://github.com/mariebayard/" title="Gå till Github" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                                <!-- Lägger till rätt länk när jag kan lägga koden publikt.-->
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!--------------- Section Portfolio END------------------>
+            <!--------------- Section References START------------------>
+            <section id="references">
+                <h1 class="section-title">Referenser</h1>
+                <p class="section-p">Läs vad mina kollegor tycker om mig;</p>
+                <article class="references-article">
+                    <div class="reference-list">
+                        <h2 class="reference-name">Lars Björndahl</h2>
+                        <p class="reference-position">Rekrytering- & Utbildningsansvarig, Friskis & Svettis Sthlm</p>
+                        <p class="reference-quote"> <i class="fas fa-quote-left"></i>
+                            Maries absoluta 
+                            styrka är att komma till avslut i arbetsuppgifter och på så sätt genomgående 
+                            leveranssäkra de uppdrag som hon åtar sig.<i class="fas fa-quote-right"></i>
+                        </p>
+                    </div>
+                    <div class="reference-list">
+                        <h2 class="reference-name">Malin Wennerbrandt</h2>
+                        <p class="reference-position">Teamledare Träningsansvariga, Friskis & Svettis Sthlm</p>
+                        <p class="reference-quote"><i class="fas fa-quote-left"></i>Min erfarenhet av att arbeta tillsammans med Marie är att hon är en pärla. Hon tar
+                            stort ansvar för sitt arbete, håller deadlines och hjälper till där det behövs. Hon är
+                            noggrann och bidrar till att utveckla och förbättra verksamheten.<i class="fas fa-quote-right"></i>
+                        </p>
+                    </div>
+                    <div class="reference-list">
+                        <h2 class="reference-name">Helena Jaarnek</h2>
+                        <p class="reference-position">HR för funktionär, Friskis & Svettis Sthlm</p>
+                        <p class="reference-quote"><i class="fas fa-quote-left"></i>Marie är lösningsorienterad, kunnig, lyhörd, intresserad och 
+                            engagerad i sitt arbete och räds inga utmaningar. Marie är också en mycket god och omtyckt kollega 
+                            som sprider fin energi och är mån om andra. <i class="fas fa-quote-right"></i>
+                        </p>
+                    </div>
+                    <div class="reference-list">
+                        <h2 class="reference-name">Johan Eskils</h2>
+                        <p class="reference-position">AI Developer Student, Jensen YH</p>
+                        <p class="reference-quote"><i class="fas fa-quote-left"></i>Om du ger Marie
+                            en uppgift kommer hon att leverera i tid med resultat som överträffar dina
+                            förväntningar. Marie är den ärliga och raka medarbetaren som alla vill samarbeta med.<i class="fas fa-quote-right"></i>
+                        </p>
+                    </div> 
+                </article>
+            </section>
+            <!--------------- Section References END------------------>
+            <!--------------- Section Contact START------------------>
+            <section id="contact">
+                <h1 class="section-title">Kontakta Mig</h1>
+                <p class="section-p">Jag ser fram emot att höra från dig!</p>
+                <article class="contact-article">
+                    <div class="contact-left">
+                        <p><i class="fas fa-envelope"></i><a href="mailto:mariebayard87@gmail.com">mariebayard87@gmail.com</a></p>
+                        <p><i class="fas fa-phone"></i><a href="tel:0707360450">0707360450</a></p>
+                        <div class="social-media">
+                            <a href="https://www.github.com/mariebayard/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/marie-bayard-b7b922255/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                        <a href="images/CV Marie Bayard.pdf" download class="btn btn-cv-contact">Ladda ner CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <img class="contact-img" src="images/contact_pic.png" alt="Profilepicture">
+                        
+                    </div>
+                </article>
+            </section>
+            <!--------------- Section Contact END------------------>
+            <!--------------- Footer START------------------>
+            <footer>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="#header">Hem</a></li>
+                        <li><a href="#about">Om mig</a></li>
+                        <li><a href="#skills_experience">Kompetens</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#references">Referenser</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <p class="footer-p">Copyright &copy; <span>Marie</span>!</p>
+            </footer>
+            <!--------------- Footer END------------------>
+        </main>
+    </div>
+    <!-----------------Container END----------------------->
+    <script src="index.js"></script>
+</body>
+</html>
